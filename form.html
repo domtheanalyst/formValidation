@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form JS</title>
+</head>
+
+<body>
+  <h2>Form Validations</h2>
+
+  <form id="myForm" action="" method="get">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+    </div>
+    <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    </div>
+      <div>
+        <label for="otherNames">Other Name:</label>
+        <input type="text" id="otherNames" name="otherNames">
+      </div>
+
+      <div>
+        <label for="emailAddress">Email Address:</label>
+        <input type="email" id="emailAddress" name="emailAddress" required>
+      </div>
+
+      <div>
+        <label for="phoneNumber">Phone Number :</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{11}" required>
+      </div>
+
+      <div>
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+          <option value="">Select Gender:</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+  </form>
+
+  <!--create div  for display of error messages -->
+  <div id="errors" class="error" style="color:red;"></div>
+
+  <script src="./form.js"></script>
+</body>
+
+</html>
